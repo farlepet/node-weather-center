@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>tv-info</title>
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans:100,400,500,700" rel="stylesheet"> 
+        <link href='css/main.css' rel='stylesheet' type='text/css'>
+        <script src="lib/axios.min.js"></script>
+        <script src="lib/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div class="backdrop"></div>
+            <img src="img/overlays/0.png" class="overlay"/>
+
+            <!-- TODO: Allow for multiple overlay types! -->
+
+            <div class="origionalOverlay">
+                <div class="dateTime">
+                    <div class="time overlayText">
+                        <span class="hour">--</span>
+                        <span class="timeSeparator">:</span>
+                        <span class="minute">--</span>
+                    </div>
+                    <div class="date overlayText">
+                        <span class="dateText"></span>
+                    </div>
+                </div>
+
+
+                <div class="briefWeather overlayText">
+                    <span class="city">St. Paul</span>
+                    <span class="day">[Weekday]</span>
+                    <div class="weatherIconContainer">
+                        <img class="weatherIcon" src=""/>
+                    </div>
+                    <span class="temp degrees">--</span>
+                </div>
+    
+                <div class="extendedWeather overlayText">
+                    <div class="highLow">
+                        <div class="highContainer">
+                            <img class="highIcon" src="img/weather/icons/arrow.png"/>
+                            <span class="high degrees"></span>
+                        </div>
+                        <div class="lowContainer">
+                            <img class="lowIcon" src="img/weather/icons/arrow.png"/>
+                            <span class="low degrees"></span>
+                        </div>
+                    </div>
+                    <div class="precipContainer">
+                        <img class="precipIcon" src="img/weather/icons/precipitation.png"/>
+                        <span class="precip inches"></span>
+                    </div>
+                    <div class="windContainer">
+                        <img class="windIcon" src="img/weather/icons/wind_speed.png"/>
+                        <span class="windSpeed mph"></span>
+                        <img class="windDirection" src="img/weather/icons/arrow.png"/>
+                    </div>
+                    <div class="feelsLikeContainer">
+                        <img class="feelsLikeIcon" src="img/weather/icons/feels_like.png"/>
+                        <span class="feelsLike degrees"></span>
+                    </div>
+                    <div class="visibilityContainer">
+                        <img class="visibilityIcon" src="img/weather/icons/visibility.png"/>
+                        <span class="visibility miles"></span>
+                    </div>
+                    <div class="dewPointContainer">
+                        <img class="dewPointIcon" src="img/weather/icons/dew_point.png"/>
+                        <span class="dewPoint degrees"></span>
+                    </div>
+                </div>
+
+                <div class="forecast overlayText">
+                    <div class="forecastDay"></div>
+                    <div class="forecastSeparator"></div>
+
+                    <div class="forecastDay"></div>
+                    <div class="forecastSeparator"></div>
+
+                    <div class="forecastDay"></div>
+                    <div class="forecastSeparator"></div>
+
+                    <div class="forecastDay"></div>
+                    <div class="forecastSeparator"></div>
+
+                    <div class="forecastDay"></div>
+                </div>
+            </div>
+
+            <div class="newsContainer overlayText">
+
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+src/web/static/img/backdrops
+node_modules
+dist
+
+src/config.ts
+src/web/config.ts

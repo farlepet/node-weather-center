@@ -1,0 +1,32 @@
+{
+  "name": "tv-info",
+  "version": "0.0.1",
+  "description": "Serves a web page to display information meant to be displayed on a screen.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "node dist/index.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "build-scss": "sassc src/web/scss/main.scss dist/web/css/main.css",
+    "copy-web": "cp src/web/static/* dist/web -r",
+    "serve": "DEBUG=main,WebServer*,api* node -r source-map-support/register dist/index.js",
+    "debug": "DEBUG=main,WebServer*,api* nodemon --inspect -r source-map-support/register dist/index.js",
+    "debug-all": "DEBUG=* nodemon -r source-map-support/register dist/index.js"
+  },
+  "author": "Peter Farley",
+  "license": "MIT",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/debug": "0.0.30",
+    "@types/express": "^4.11.1",
+    "@types/jquery": "^3.3.0",
+    "axios": "^0.17.1",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "source-map-support": "^0.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}

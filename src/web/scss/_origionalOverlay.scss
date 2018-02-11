@@ -1,0 +1,303 @@
+.origionalOverlay {
+    position: absolute;
+    left:     0;
+    top:      0;
+    width:    100%;
+    height:   100%;
+}
+
+.dateTime{
+    .time {
+        position: absolute;
+        left:     5%;
+        top:      4%;
+        width:    28%;
+
+        text-align:  center;
+
+        .hour, .timeSeparator, .minute {
+            font-size:   180px;
+            font-weight: 100;
+        }
+
+        .timeSeparator {
+            margin-left:  .25em;
+            margin-right: .25em;
+        }
+    }
+
+    .date {
+        position: absolute;
+        left:     5%;
+        top:      25%;
+        width:    28%;
+
+        text-align:  center;
+        font-size:   44px;
+        font-weight: 500;
+    }
+}
+
+.briefWeather {
+    position: absolute;
+    left:     5%;
+    top:      38%;
+    width:    24%;
+    height:   55%;
+
+    text-align:  center;
+
+    .city, .day, .weatherIconContainer, .temp {
+        left:     0;
+        width:    100%;
+    }
+
+    .city {
+        position: absolute;
+        top:      0%;
+
+        font-size:   104px;
+        font-weight: 500;
+    }
+
+    .day {
+        position: absolute;
+        top:      22%;
+        
+        font-size:   48px;
+        font-weight: 400;
+    }
+
+    .weatherIconContainer {
+        position: absolute;
+        top:      33%;
+        height:   46%;
+
+        .weatherIcon {
+            height: 100%;
+            width:  auto;
+        }
+    }
+
+    .temp {
+        position: absolute;
+        bottom:   0;
+        
+        font-size:   108px;
+        font-weight: 500;
+    }
+}
+
+.extendedWeather {
+    position: absolute;
+    top:      0;
+    left:     0;
+    width:    100%;
+    height:   100%;
+
+    .highLow {
+        position: absolute;
+        width:    20%;
+        height:   6.2%;
+        top:      8%;
+        left:     41%;
+
+        .highIcon, .lowIcon {
+            height: 100%;
+            width:  auto;
+            margin-right: 25px;
+        }
+
+        .highIcon {
+            transform: rotate(180deg);
+        }
+
+        .high, .low {
+            font-size:   64px;
+            font-weight: 500;
+        }
+
+        .highContainer {
+            float: left;
+        }
+
+        .lowContainer {
+            float: right;
+        }
+
+        .highContainer, .lowContainer {
+            width: 49%;
+            height: 100%;
+            text-align:  center;
+        }
+    }
+
+    .precipContainer {
+        position: absolute;
+        left:     40%;
+        top:      16%;
+        height:   6.2%;
+
+        img {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .precip {
+            font-size:   64px;
+            font-weight: 500;
+        }
+    }
+   
+    .windContainer {
+        position: absolute;
+        left:     39%;
+        top:      24%;
+        height:   6.2%;
+
+        .windIcon {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .windSpeed {
+            font-size:   64px;
+            font-weight: 500;
+        }
+
+        .windDirection {
+            height: 75%;
+            width:  auto;
+
+            margin-left: 25px;
+        }
+    }
+
+    .feelsLikeContainer {
+        position: absolute;
+        left:     38%;
+        top:      32%;
+        height:   6.2%;
+
+        img {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .feelsLike {
+            font-size:   64px;
+            font-weight: 500;
+        }
+    }
+
+    .visibilityContainer {
+        position: absolute;
+        left:     37%;
+        top:      40%;
+        height:   6.2%;
+
+        img {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .visibility {
+            font-size:   64px;
+            font-weight: 500;
+        }
+    }
+
+    .dewPointContainer {
+        position: absolute;
+        left:     36%;
+        top:      48%;
+        height:   6.2%;
+
+        img {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .dewPoint {
+            font-size:   64px;
+            font-weight: 500;
+        }
+    }
+}
+
+.forecast {
+    position: absolute;
+    left:     34%;
+    top:      68%;
+    height:   25%;
+    width:    62%;
+
+    .forecastDay {
+        position: fixed;
+        top:      0;
+        width:    18%;
+        height:   100%;
+        float:    left;
+
+        text-align: center;
+
+        .day {
+            position: relative;
+            top:      0;
+            left:     0;
+            width:    100%;
+            
+            font-size:   48px;
+            font-weight: 500;
+            text-align:  center;
+        }
+
+        .icon {
+            height: 50%;
+            width:  auto;
+        }
+
+        .temp {
+            position: relative;
+            bottom:   0;
+            left:     0;
+            width:    100%;
+            
+            font-size:   64px;
+            font-weight: 500;
+            text-align:  center;
+        }
+    }
+
+    .forecastSeparator {
+        position: fixed;
+        top:      0;
+        height:   100%;
+        float:    left;
+
+        text-align: center;
+
+        img {
+            height: 100%;
+            width:  auto;
+        }
+    }
+}
+
+.newsContainer {
+    position: absolute;
+    left:     34%;
+    top:      68%;
+    height:   25%;
+    width:    62%;
+}

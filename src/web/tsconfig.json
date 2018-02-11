@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "../../dist/web",
+        "outFile": "../../dist/web/app.js",
+        "baseUrl": "./",
+        "paths": {
+            "*": [
+                "./node_modules/*"
+            ]
+        }
+        
+    },
+    "files": [
+        "main.ts"
+    ]
+}
