@@ -70,7 +70,6 @@ namespace Overlays {
             this.news = new NewsAPI();
 
             this.createForecast();
-            this.createNews();
         }
 
         public init() {
@@ -133,10 +132,6 @@ namespace Overlays {
 
         private updateDateTime() {
             var date = new Date();
-
-            /*var str: string = util.pad(date.getHours(), 2, "0");
-            str += "&#8239;:&#8239;";
-            str += util.pad(date.getMinutes(), 2, "0");*/
 
             $(".time .hour").html(util.pad(date.getHours(), 2, "0"));
             $(".time .minute").html(util.pad(date.getMinutes(), 2, "0"));
@@ -205,21 +200,9 @@ namespace Overlays {
                 if(day !== null) {
                     $(elem).find(".day").text(util.dayToShortString((date.getDay() + idx + 1) % 7));
                     $(elem).find(".icon").attr("src", this.getWeatherIcon(day._icon));
-                    $(elem).find(".temp").html(day.high);
+                    $(elem).find(".temp").html(day.high.toString());
                 }
             });
-        }
-
-
-        private createNews() {
-            this.container.append($("<div/>").addClass("newsContainer").addClass("overlayText").css({
-                position: "absolute",
-                left: "65%",
-                top:  "4%",
-                width: "29.5%",
-                height: "52%",
-                transform: "rotate(8deg)"
-            }));
         }
 
         private updateNews() {
@@ -227,24 +210,16 @@ namespace Overlays {
 
             $(".newsContainer").empty();
 
-            for(var i = 0; i < 6; i++) {
+            for(var i = 0; i < 5; i++) {
                 var item = this.news.getItem(i);
                 if(item === null) break;
 
                 $(".newsContainer").append(
-                    $("<article/>").addClass("newsItem").css({
-                        width: "100%",
-                        transform: "rotate(-8deg)"
-                    }).append(
-                        $("<img/>").addClass("thumb").attr("src", item.imageUrl).css({
-                            width: "15%",
-                            float: "left",
-                            "margin-right": "0.5em"
-                    })).append($("<header/>").append(
-                        $("<h2/>").addClass("title").text(item.title).css({
-                            "font-size": "26px",
-                            "font-weight": "400"
-                        })
+                    $("<article/>").addClass("newsItem").append(
+                        $("<img/>").addClass("thumb").attr("src", item.imageUrl)
+                    ).append(
+                        $("<header/>").append(
+                            $("<h2/>").addClass("title").text(item.title)
                     ))
                 );
             }

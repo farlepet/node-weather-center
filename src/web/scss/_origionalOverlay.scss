@@ -295,9 +295,27 @@
 }
 
 .newsContainer {
-    position: absolute;
-    left:     34%;
-    top:      68%;
-    height:   25%;
-    width:    62%;
+    position:  absolute;
+    left:      65%;
+    top:       4%;
+    height:    52%;
+    width:     29.5%;
+    transform: rotate(8deg);
+
+    .newsItem {
+        width:     100%;
+        transform: rotate(-8deg);
+
+        .thumb {
+            width: 15%;
+            float: left;
+
+            margin-right: 15px;
+        }
+
+        .title {
+            font-size:   26px;
+            font-weight: 400;
+        }
+    }
 }
