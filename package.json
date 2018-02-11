@@ -1,8 +1,8 @@
 {
-  "name": "tv-info",
+  "name": "node-weather-center",
   "version": "0.0.1",
   "description": "Serves a web page to display information meant to be displayed on a screen.",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "node dist/index.js",
     "build-ts": "tsc",
@@ -13,7 +13,10 @@
     "debug": "DEBUG=main,WebServer*,api* nodemon --inspect -r source-map-support/register dist/index.js",
     "debug-all": "DEBUG=* nodemon -r source-map-support/register dist/index.js"
   },
-  "author": "Peter Farley",
+  "author": "Peter Farley <far.peter1@gmail.com> (https://github.com/farlepet)",
+  "contributors": [
+    "Rajeep Lamichinee"
+  ],
   "license": "MIT",
   "dependencies": {
     "@types/axios": "^0.14.0",
