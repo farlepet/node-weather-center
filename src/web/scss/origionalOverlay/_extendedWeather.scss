@@ -1,0 +1,146 @@
+.extendedWeather {
+    position: absolute;
+    top:      0;
+    left:     0;
+    width:    100%;
+    height:   100%;
+
+    .highLow {
+        position: absolute;
+        width:    20%;
+        height:   6.2%;
+        top:      8%;
+        left:     41%;
+
+        .highIcon, .lowIcon {
+            height: 100%;
+            width:  auto;
+            margin-right: 25px;
+        }
+
+        .highIcon {
+            transform: rotate(180deg);
+        }
+
+        .high, .low {
+            font-size:   64px;
+            font-weight: 500;
+        }
+
+        .highContainer {
+            float: left;
+        }
+
+        .lowContainer {
+            float: right;
+        }
+
+        .highContainer, .lowContainer {
+            width: 49%;
+            height: 100%;
+            text-align:  center;
+        }
+    }
+
+    .precipContainer {
+        position: absolute;
+        left:     40%;
+        top:      16%;
+        height:   6.2%;
+
+        img {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .precip {
+            font-size:   64px;
+            font-weight: 500;
+        }
+    }
+   
+    .windContainer {
+        position: absolute;
+        left:     39%;
+        top:      24%;
+        height:   6.2%;
+
+        .windIcon {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .windSpeed {
+            font-size:   64px;
+            font-weight: 500;
+        }
+
+        .windDirection {
+            height: 75%;
+            width:  auto;
+
+            margin-left: 25px;
+        }
+    }
+
+    .feelsLikeContainer {
+        position: absolute;
+        left:     38%;
+        top:      32%;
+        height:   6.2%;
+
+        img {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .feelsLike {
+            font-size:   64px;
+            font-weight: 500;
+        }
+    }
+
+    .visibilityContainer {
+        position: absolute;
+        left:     37%;
+        top:      40%;
+        height:   6.2%;
+
+        img {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .visibility {
+            font-size:   64px;
+            font-weight: 500;
+        }
+    }
+
+    .dewPointContainer {
+        position: absolute;
+        left:     36%;
+        top:      48%;
+        height:   6.2%;
+
+        img {
+            height: 100%;
+            width:  auto;
+
+            margin-right: 25px;
+        }
+
+        .dewPoint {
+            font-size:   64px;
+            font-weight: 500;
+        }
+    }
+}

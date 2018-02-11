@@ -1,0 +1,58 @@
+.forecast {
+    position: absolute;
+    left:     34%;
+    top:      68%;
+    height:   25%;
+    width:    62%;
+
+    .forecastDay {
+        position: fixed;
+        top:      0;
+        width:    18%;
+        height:   100%;
+        float:    left;
+
+        text-align: center;
+
+        .day {
+            position: relative;
+            top:      0;
+            left:     0;
+            width:    100%;
+            
+            font-size:   48px;
+            font-weight: 500;
+            text-align:  center;
+        }
+
+        .icon {
+            height: 50%;
+            width:  auto;
+        }
+
+        .temp {
+            position: relative;
+            bottom:   0;
+            left:     0;
+            width:    100%;
+            
+            font-size:   64px;
+            font-weight: 500;
+            text-align:  center;
+        }
+    }
+
+    .forecastSeparator {
+        position: fixed;
+        top:      0;
+        height:   100%;
+        float:    left;
+
+        text-align: center;
+
+        img {
+            height: 100%;
+            width:  auto;
+        }
+    }
+}

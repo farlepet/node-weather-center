@@ -1,0 +1,49 @@
+.briefWeather {
+    position: absolute;
+    left:     5%;
+    top:      38%;
+    width:    24%;
+    height:   55%;
+
+    text-align:  center;
+
+    .city, .day, .weatherIconContainer, .temp {
+        left:     0;
+        width:    100%;
+    }
+
+    .city {
+        position: absolute;
+        top:      0%;
+
+        font-size:   104px;
+        font-weight: 500;
+    }
+
+    .day {
+        position: absolute;
+        top:      22%;
+        
+        font-size:   48px;
+        font-weight: 400;
+    }
+
+    .weatherIconContainer {
+        position: absolute;
+        top:      33%;
+        height:   46%;
+
+        .weatherIcon {
+            height: 100%;
+            width:  auto;
+        }
+    }
+
+    .temp {
+        position: absolute;
+        bottom:   0;
+        
+        font-size:   108px;
+        font-weight: 500;
+    }
+}
