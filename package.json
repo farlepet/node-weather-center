@@ -5,13 +5,21 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "node dist/index.js",
+
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
+    "build-ts-web": "cd src/web && tsc || exit 0",
+    "watch-ts-web": "cd src/web && tsc -w",
+
     "build-scss": "sassc src/web/scss/main.scss dist/web/css/main.css",
+
     "copy-web": "cp src/web/static/* dist/web -r",
+    
     "serve": "DEBUG=main,WebServer*,api* node -r source-map-support/register dist/index.js",
     "debug": "DEBUG=main,WebServer*,api* nodemon --inspect -r source-map-support/register dist/index.js",
-    "debug-all": "DEBUG=* nodemon -r source-map-support/register dist/index.js"
+    "debug-all": "DEBUG=* nodemon -r source-map-support/register dist/index.js",
+
+    "build-all": "npm run build-ts && npm run build-ts-web && npm run build-scss && npm run copy-web"
   },
   "author": "Peter Farley <far.peter1@gmail.com> (https://github.com/farlepet)",
   "contributors": [
