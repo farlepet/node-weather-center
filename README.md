@@ -50,3 +50,9 @@ npm run serve
 ```
 
 Then the app should be accessible from http://localhost:3000
+
+
+Comments and Contributions
+--------------------------
+
+If you have any ideas for, or comments about, this project, don't hesitate to submit a pull request, create an issue, or email me about it.
