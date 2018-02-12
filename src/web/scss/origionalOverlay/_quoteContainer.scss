@@ -1,0 +1,35 @@
+.quoteContainer {
+    position:  absolute;
+
+    left:      67%;
+    top:       6%;
+    height:    14%;
+    width:     29%;
+
+    .textContainer {
+        position:  relative;
+        width:     100%;
+        top:       50%;
+        transform: translateY(-50%);
+        
+        text-align:     center;
+
+
+
+        .quoteText {
+            font-size:   32px;
+            font-weight: 400;
+        }
+
+        .quoteAttribution {
+            font-size:   30px;
+            font-weight: 400;
+
+            padding-left: 5em;
+        }
+    }
+    
+    .quoteAttribution::before {
+        content: "- ";
+    }
+}

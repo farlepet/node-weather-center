@@ -27,6 +27,21 @@ body {
     position: absolute;
     left: 0;
     top:  0;
+
+    .active {
+        display: block;
+    }
+
+    .inactive {
+        display: none;
+    }
+
+    img {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1s;
+        animation-name: fade;
+        animation-duration: 1s;
+    }
 }
 
 .overlay {

@@ -1,4 +1,7 @@
-src/web/static/img/backdrops
+src/web/static/img/backdrops/*
+!src/web/static/img/backdrops/nature-cc
+!src/web/static/img/backdrops/nature-cc/*
+
 node_modules
 dist
 

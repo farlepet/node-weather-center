@@ -59,18 +59,55 @@ namespace config {
         /** List of backdrop themes */
         export var backdropThemes : BackdropEntry[] = [
             // Place themes here
+            {
+                name:          "Nature (Creative Commons)",
+                dir:           "nature-cc",
+                default_day:   "clear_day_0.png",
+                default_night: "clear_night_0.png",
+
+                backdrops: [
+                    {
+                        condition:     "sunny",
+                        file_day:      "clear_day",
+                        file_night:    null,
+                        n_files_day:   2,
+                        n_files_night: 0
+                    },
+                    {
+                        condition:     "clear",
+                        file_day:      "clear_day",
+                        file_night:    "clear_night",
+                        n_files_day:   2,
+                        n_files_night: 2
+                    },
+                    {
+                        condition:     "foggy",
+                        file_day:      null,
+                        file_night:    null,
+                        n_files_day:   0,
+                        n_files_night: 0
+                    },
+                    {
+                        condition:     "rainy",
+                        file_day:      null,
+                        file_night:    null,
+                        n_files_day:   0,
+                        n_files_night: 0
+                    },
+                    {
+                        condition:     "snow",
+                        file_day:      null,
+                        file_night:    null,
+                        n_files_day:   0,
+                        n_files_night: 0
+                    }
+                ]
+            }
         ];
 
         /** Which theme to choose */
         export var backdropTheme: number = 0;
 
-        /**
-         * Get a random backdrop image with given conditon and time.
-         * 
-         * @param condition Current condition
-         * @param time Current time (day/night)
-         * @return Path to file, if one exists, else the default for the given time
-         */
         export function getBackdropFile(condition: string, time: string): string {
             var bEnt = backdropThemes[backdropTheme];
             var baseDir = backdrop_dir + bEnt.dir + "/";
@@ -97,13 +134,6 @@ namespace config {
                 return baseDir + bEnt.default_night;
         }
 
-        /**
-         * Get a list of backdrop images with given conditon and time.
-         * 
-         * @param condition Current condition
-         * @param time Current time (day/night)
-         * @return Array of image paths, if any exist, else the default for the given time
-         */
         export function getBackdropFiles(condition: string, time: string): string[] {
             var bEnt          = backdropThemes[backdropTheme];
             var baseDir       = backdrop_dir + bEnt.dir + "/";
@@ -113,7 +143,7 @@ namespace config {
                 if(bEnt.backdrops[i].condition === condition) {
                     if(time == "night") {
                         if(bEnt.backdrops[i].n_files_night > 0) {
-                            for(var j = 0; j < bEnt.backdrops[j].n_files_night; j++) {
+                            for(var j = 0; j < bEnt.backdrops[i].n_files_night; j++) {
                                 ret[j] = baseDir + bEnt.backdrops[i].file_night + "_" + j + ".png";
                             }
                             return ret;

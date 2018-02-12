@@ -63,6 +63,8 @@ namespace Overlays {
 
         private currBackdropCondition: string;
         private currBackdropTime:      string;
+        private currBackdropIdx:       number = 0;
+        private currBackdropN:         number = 0;
 
         constructor() {
             super();
@@ -99,35 +101,44 @@ namespace Overlays {
 
             if(this.currBackdropCondition === undefined || this.currBackdropCondition !== cond || this.currBackdropTime !== time) {
                 var backdrops = config.backdrops.getBackdropFiles(cond, time);
+                console.info(backdrops);
                 $(".backdrop").empty();
                 backdrops.forEach((value: string, index: number, arr: string[]) => {
                     $(".backdrop").append(
-                        $("<img/>", { src: value }).css({
+                        $("<img/>", { src: value })/*.css({
                             display: (index === 0) ? "block" : "none",
                             "-webkit-animation-name": "fade",
                             "-webkit-animation-duration": "1s",
                             "animation-name": "fade",
                             "animation-duration": "1s"
-                        }).addClass("backdropImg").addClass((index === 0) ? "active" : "inactive")
+                        })*/.addClass("backdropImg").addClass((index === 0) ? "active" : "inactive")
                     )
                 });
 
-                /*var backdrop = config.backdrops.getBackdropFile(cond, time);
-                $(".backdrop").attr("src", backdrop);
+                this.currBackdropIdx = 0;
+                this.currBackdropN   = backdrops.length;
+
+                //var backdrop = config.backdrops.getBackdropFile(cond, time);
+                //$(".backdrop").attr("src", backdrop);
 
                 this.currBackdropCondition = cond;
-                this.currBackdropTime      = time;*/
+                this.currBackdropTime      = time;
             }
         }
 
         private rotateBackdrop() {
-            /*var date = new Date();
-            
-            var cond = this.weather.getIcon();
-            var time = (date.getHours() > 17) ? "night" : "day";
+            let idx = Math.floor(Math.random() * this.currBackdropN);
 
-            var backdrop = config.backdrops.getBackdropFile(cond, time);
-            $(".backdrop").attr("src", backdrop);*/
+            console.info("rotateBackdrop(): " + this.currBackdropIdx + " => " + idx);
+
+            if(idx !== this.currBackdropIdx) {
+                $(".backdropImg").eq(idx).addClass("active");
+                $(".backdropImg").eq(idx).removeClass("inactive");
+                $(".backdropImg").eq(this.currBackdropIdx).removeClass("active");
+                $(".backdropImg").eq(this.currBackdropIdx).addClass("inactive");
+                this.currBackdropIdx = idx;
+            }
+
         }
 
         private updateDateTime() {
@@ -210,7 +221,7 @@ namespace Overlays {
 
             $(".newsContainer").empty();
 
-            for(var i = 0; i < 3; i++) {
+            for(var i = 0; i < 4; i++) {
                 var item = this.news.getItem(i);
                 if(item === null) break;
 

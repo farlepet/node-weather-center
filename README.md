@@ -5,6 +5,8 @@ A simple weather and headline display/dashboard.
 Uses [Weather Underground](https://www.wunderground.com) for weather, and [News API](https://newsapi.org/) for headlines.
 In order to use it, you will need to obtain an API key for both of these services.
 
+![Example image](example.png)
+
 Prerequisites
 -------------
 
