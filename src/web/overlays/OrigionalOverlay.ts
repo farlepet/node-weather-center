@@ -1,6 +1,7 @@
 /// <reference path="./Overlay.ts"/>
 /// <reference path="../util.ts"/>
 /// <reference path="../sections/news/NewsAPI.ts"/>
+/// <reference path="../sections/Quotes.ts"/>
 
 namespace Overlays {
     interface weatherIcon {
@@ -12,6 +13,9 @@ namespace Overlays {
     export class OrigionalOverlay extends Overlay {
         private updateRate:         number = 5000;
         private backdropRotateRate: number = 60000;
+        private quoteRotateRate:    number = 30000;
+
+        private quotes: Quotes;
 
         private weatherIcons: {[index: string] : weatherIcon} = {
             "snow": {
@@ -69,7 +73,8 @@ namespace Overlays {
         constructor() {
             super();
 
-            this.news = new NewsAPI();
+            this.news   = new NewsAPI();
+            this.quotes = new Quotes();
 
             this.createForecast();
         }
@@ -79,8 +84,12 @@ namespace Overlays {
 
             this.news.init();
 
+            this.updateQuote();
+            this.update();
+
             setInterval(() => this.update(), this.updateRate);
             setInterval(() => this.rotateBackdrop(), this.backdropRotateRate);
+            setInterval(() => this.updateQuote(), this.quoteRotateRate);
         }
         
         public update() {
@@ -234,6 +243,14 @@ namespace Overlays {
                     ))
                 );
             }
+        }
+
+        private updateQuote() {
+            let quote = this.quotes.getRandomQuote();
+            if(quote === null) return;
+
+            $(".quoteText").html(quote.quote);
+            $(".quoteAttribution").html(quote.author);
         }
 
         private getWeatherIcon(cond: string, time: string = "day"): string {
