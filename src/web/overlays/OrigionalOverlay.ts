@@ -210,7 +210,7 @@ namespace Overlays {
 
             $(".newsContainer").empty();
 
-            for(var i = 0; i < 5; i++) {
+            for(var i = 0; i < 3; i++) {
                 var item = this.news.getItem(i);
                 if(item === null) break;
 
