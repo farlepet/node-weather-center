@@ -82,24 +82,31 @@ namespace config {
                     },
                     {
                         condition:     "foggy",
-                        file_day:      null,
-                        file_night:    null,
-                        n_files_day:   0,
-                        n_files_night: 0
+                        file_day:      "fog_day",
+                        file_night:    "fog_night",
+                        n_files_day:   2,
+                        n_files_night: 1
                     },
                     {
                         condition:     "rainy",
-                        file_day:      null,
+                        file_day:      "rain_day",
                         file_night:    null,
-                        n_files_day:   0,
+                        n_files_day:   2,
                         n_files_night: 0
                     },
                     {
                         condition:     "snow",
-                        file_day:      null,
-                        file_night:    null,
-                        n_files_day:   0,
-                        n_files_night: 0
+                        file_day:      "snow_day",
+                        file_night:    "snow_night",
+                        n_files_day:   1,
+                        n_files_night: 1
+                    },
+                    {
+                        condition:     "tstorm",
+                        file_day:      "tstorm_day",
+                        file_night:    "tstorm_night",
+                        n_files_day:   1,
+                        n_files_night: 1
                     }
                 ]
             }
