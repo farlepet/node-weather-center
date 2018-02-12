@@ -173,7 +173,7 @@ namespace Overlays {
             $(".precipContainer .precip").html(this.weather.getPrecipitation().toString());
             
             $(".windContainer .windSpeed").html(this.weather.getWindSpeed().toString());
-            $(".windDirection").css("transform", "rotate(" + (this.weather.getWindDirection() + 180) + "deg)");
+            $(".windDirection").css("transform", "rotate(" + (this.weather.getWindDirection()) + "deg)");
 
             $(".feelsLikeContainer .feelsLike").html(this.weather.getWindchill().toString());
             $(".visibilityContainer .visibility").html(this.weather.getVisibility().toString());

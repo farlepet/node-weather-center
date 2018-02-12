@@ -66,6 +66,7 @@
         left:     39%;
         top:      24%;
         height:   6.2%;
+        width:    20%;
 
         .windIcon {
             height: 100%;
@@ -79,12 +80,32 @@
             font-weight: 500;
         }
 
-        .windDirection {
-            height: 75%;
-            width:  auto;
+        .compass {
+            position: relative;
+            height:   100%;
+            float:    right;
 
-            margin-left: 25px;
+            margin-top: 5%;
+
+            .compassBody {
+                position: absolute;
+                top:      0;
+                right:    0;
+
+                height: 75%;
+                width:  auto;
+            }
+
+            .windDirection {
+                position: absolute;
+                top:      0;
+                right:    0;
+
+                height: 75%;
+                width:  auto;
+            }
         }
+        
     }
 
     .feelsLikeContainer {
