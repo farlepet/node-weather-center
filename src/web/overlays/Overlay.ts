@@ -1,7 +1,7 @@
-/// <reference path="../sections/Weather.ts"/>
-/// <reference path="../sections/News.ts"/>
+import { Weather } from "../sections/Weather";
+import { News } from "../sections/News";
 
-abstract class Overlay {
+export abstract class Overlay {
     protected container : JQuery;
 
     protected weather : Weather;

@@ -6,7 +6,7 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "../../dist/web",
-        "outFile": "../../dist/web/app.js",
+        "outFile": "../../dist/web/bundle.js",
         "baseUrl": "./",
         "paths": {
             "*": [
@@ -15,7 +15,7 @@
         }
         
     },
-    "files": [
-        "main.ts"
+    "include": [
+        "./**/*"
     ]
 }

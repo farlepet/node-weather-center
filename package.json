@@ -9,7 +9,7 @@
     "watch-ts": "tsc -w",
     "build-ts-web": "cd src/web && tsc || exit 0",
     "watch-ts-web": "cd src/web && tsc -w",
-    "build-scss": "sassc src/web/scss/main.scss dist/web/css/main.css",
+    "build-scss": "mkdir -p dist/web/css && sassc src/web/scss/main.scss dist/web/css/main.css",
     "copy-web": "cp src/web/static/* dist/web -r",
     "serve": "DEBUG=main,WebServer*,api* node -r source-map-support/register dist/index.js",
     "debug": "DEBUG=main,WebServer*,api* nodemon --inspect -r source-map-support/register dist/index.js",

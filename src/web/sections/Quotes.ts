@@ -1,8 +1,7 @@
-/// <reference path="../../../node_modules/axios/index.d.ts"/>
+import { AxiosStatic } from 'axios';
+import * as axios from 'axios';
 
-declare var axios : AxiosStatic;
-
-class Quotes {
+export class Quotes {
     private qf: QuotesFile;
 
     constructor() {

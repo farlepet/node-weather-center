@@ -5,9 +5,23 @@
         <title>tv-info</title>
         <link href="https://fonts.googleapis.com/css?family=Encode+Sans:100,400,500,700" rel="stylesheet"> 
         <link href='css/main.css' rel='stylesheet' type='text/css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.9/system.js"></script>
+    
         <script src="lib/axios.min.js"></script>
         <script src="lib/jquery.min.js"></script>
-        <script src="app.js"></script>
+        <!--<script src="bundle.js"></script>-->
+
+        <script>
+            SystemJS.import("bundle.js")
+                .then((module)=> {
+                    console.debug(module);
+
+                    start();
+                })
+                .catch((error)=> {
+                    console.error(error);
+                });
+        </script>
     </head>
     <body>
         <div class="mainContainer">

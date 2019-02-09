@@ -1,4 +1,4 @@
-abstract class News {
+export abstract class News {
     constructor() {
 
     }
@@ -22,7 +22,7 @@ abstract class News {
     public abstract update(): void;
 }
 
-interface NewsItem {
+export interface NewsItem {
     title:       string;
     author:      string;
     published:   Date;

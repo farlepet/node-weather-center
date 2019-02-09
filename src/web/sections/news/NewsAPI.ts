@@ -1,7 +1,9 @@
-/// <reference path="../News.ts"/>
-/// <reference path="../../config.ts"/>
+import { News, NewsItem } from "../News";
+import { config } from "../../config";
 
-class NewsAPI extends News {
+import * as axios from 'axios';
+
+export class NewsAPI extends News {
     private stories: NewsAPIResponse;
 
     constructor() {

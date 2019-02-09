@@ -1,11 +1,10 @@
 /// <reference path="../../api.ts"/>
-/// <reference path="../../../node_modules/axios/index.d.ts"/>
-/// <reference path="../config.ts"/>
 
+import { config } from "../config";
 
-declare var axios : AxiosStatic;
+import * as axios from 'axios';
 
-class Weather {
+export class Weather {
     private conditions: SmallWeatherAPI  = undefined;
     private forecast:   SmallForecastAPI = undefined;
     

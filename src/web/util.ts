@@ -1,4 +1,4 @@
-namespace util {
+export namespace util {
     export function pad(n: number | string, width: number, z: string = "0"): string {
         z = z || '0';
         n = n + '';

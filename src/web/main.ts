@@ -1,4 +1,6 @@
-/// <reference path="./App.ts"/>
+import { App } from "./App";
 
-let a = new App();
-a.start();
+export function start() {
+    let a = new App();
+    a.start();
+}
