@@ -1,9 +1,7 @@
-/// <reference path="./sections/Weather.ts"/>
-/// <reference path="./overlays/Overlay.ts"/>
-/// <reference path="./overlays/OrigionalOverlay.ts"/>
+import { Overlay } from "./overlays/Overlay";
+import { Overlays } from "./overlays/OrigionalOverlay";
 
-
-class Display {
+export class Display {
     /** Currently displayed overlay */
     private overlay : Overlay;
 

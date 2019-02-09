@@ -1,6 +1,6 @@
-/// <reference path="./Display.ts"/>
+import { Display } from "./Display";
 
-class App {
+export class App {
     private display: Display;
 
     constructor() {

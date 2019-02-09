@@ -1,9 +1,10 @@
-/// <reference path="./Overlay.ts"/>
-/// <reference path="../util.ts"/>
-/// <reference path="../sections/news/NewsAPI.ts"/>
-/// <reference path="../sections/Quotes.ts"/>
+import { util } from "../util";
+import { config } from "../config";
+import { Overlay } from "./Overlay";
+import { Quotes } from "../sections/Quotes";
+import { NewsAPI } from "../sections/news/NewsAPI";
 
-namespace Overlays {
+export namespace Overlays {
     interface weatherIcon {
         base:  string;
         day:   string;

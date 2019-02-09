@@ -1,21 +1,21 @@
 {
     "compilerOptions": {
         "module": "system",
-        "target": "es5",
+        "target": "es2017",
         "noImplicitAny": true,
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "../../dist/web",
-        "outFile": "../../dist/web/app.js",
+        "outFile": "../../dist/web/bundle.js",
         "baseUrl": "./",
         "paths": {
             "*": [
-                "./node_modules/*"
+                "../../node_modules/*/"
             ]
         }
         
     },
-    "files": [
-        "main.ts"
+    "include": [
+        "./**/*"
     ]
 }
