@@ -39,7 +39,12 @@ Secondly, copy/move `src/web/config.example.ts` to `src/web/config.ts`, and fill
 Building and Running
 --------------------
 
-Once you have modified the configs, simply run:
+Once you have modified the configs, you must install the needed dependencies:
+```
+npm install
+```
+
+The simply run:
 ```
 npm run build-all
 ```
