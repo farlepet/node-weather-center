@@ -1,7 +1,8 @@
+import { util } from "../util";
+import { config } from "../config";
 import { Overlay } from "./Overlay";
 import { Quotes } from "../sections/Quotes";
 import { NewsAPI } from "../sections/news/NewsAPI";
-import { util } from "../util";
 
 export namespace Overlays {
     interface weatherIcon {

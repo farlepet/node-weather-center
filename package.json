@@ -7,8 +7,7 @@
     "test": "node dist/index.js",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
-    "build-ts-web": "cd src/web && tsc || exit 0",
-    "watch-ts-web": "cd src/web && tsc -w",
+    "build-ts-web": "mkdir -p dist/web && browserify src/web/main.ts -p [ tsify --noImplicitAny ] > dist/web/bundle.js",
     "build-scss": "mkdir -p dist/web/css && sassc src/web/scss/main.scss dist/web/css/main.css",
     "copy-web": "cp src/web/static/* dist/web -r",
     "serve": "DEBUG=main,WebServer*,api* node -r source-map-support/register dist/index.js",
@@ -27,10 +26,13 @@
     "@types/express": "^4.16.1",
     "@types/jquery": "^3.3.29",
     "axios": "^0.17.1",
+    "browserify": "^16.2.3",
     "debug": "^3.2.6",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
-    "source-map-support": "^0.5.10"
+    "source-map-support": "^0.5.10",
+    "tsify": "^4.0.1",
+    "typescript": "^3.3.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
